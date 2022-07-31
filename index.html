@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GOBAL TOUR</title>
+</head>
+
+<body>
+    <div class="hero">
+        <video autoplay loop muted plays-inline id="backVideo">
+            <source src="production ID_4010941.mp4" type="video/mp4">
+        </video>
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <nav>
+
+            <div class="nav-link">
+
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABUOT</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="sidebar">
+            <div class="text-box">
+                <h1>GOLDEN RESORT</h1>
+                <h4>LUXURY LIVING</h4>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Maldives</h1>
+            <p>very nice appartments in the heart of maldives</p>
+            <div class="btn" id="playBtn">
+                <img src="play.png" id="icon"> Watch video
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        var backVideo = document.getElementById('backVideo');
+        var playBtn = document.getElementById('playBtn');
+        var icon = document.getElementById('icon');
+
+        playBtn.onclick = function () {
+            backVideo.style.display = "block";
+
+            if (backVideo.paused) {
+                backVideo.play();
+                icon.src = "pause.png";
+            }
+            else {
+                backVideo.paused();
+                icon.src = "play.png";
+            }
+        }
+    </script>
+</body>
+
+</html>
